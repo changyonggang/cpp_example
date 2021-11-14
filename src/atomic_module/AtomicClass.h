@@ -13,10 +13,12 @@ private:
     std::atomic<bool> exclusive_lock_;
 public:
     bool AcquireExclusiveLock();
+
     void ReleaseExclusiveLock();
 
-    static void* Clone(void* args);
-    static void* LoadBalance(void* args);
+    static void *Clone();
+
+    static void *LoadBalance();
 };
 
 

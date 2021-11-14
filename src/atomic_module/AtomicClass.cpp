@@ -17,7 +17,7 @@ void AtomicClass::ReleaseExclusiveLock() {
     exclusive_lock_.compare_exchange_strong(acquired_lock, false);
 }
 
-void* AtomicClass::Clone(void* args) {
+void *AtomicClass::Clone() {
     printf("clone start ...");
     sleep(10 * 1000);
     printf("clone end ...");
@@ -25,7 +25,7 @@ void* AtomicClass::Clone(void* args) {
     return 0;
 }
 
-void* AtomicClass::LoadBalance(void* args) {
+void *AtomicClass::LoadBalance() {
     printf("LoadBalance start ...");
     sleep(20 * 1000);
     printf("LoadBalance end ...");

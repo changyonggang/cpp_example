@@ -3,7 +3,7 @@
 //
 #include <iostream>
 
-int ThreadId(){
+int ThreadId() {
     static int scheduler_id = 0;
     static int zookeeper_id = 0;
     static int service_id = 0;
